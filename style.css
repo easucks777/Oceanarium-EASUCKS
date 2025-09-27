@@ -1,0 +1,382 @@
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.logo img {
+  width: 150px;
+  height: 150px;
+}
+
+:root{
+  --accent: #2a9df4;
+  --bg-dark: #0d133d;
+  --panel: #4b3ca0;
+  --card: #2b3d66;
+  --card-2: #1c2a48;
+  --white: #ffffff;
+}
+
+html,body{height:100%;}
+
+body {
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  color: var(--white);
+  font-size: 22px;
+  scroll-behavior: smooth;
+  background-color: var(--bg-dark);
+}
+
+.hero-section {
+  background: url('https://i.pinimg.com/736x/af/58/a7/af58a7d39f9fd52137e03ed9651d4ebb.jpg') no-repeat center;
+  background-size: 120%;
+  height: 400px;
+}
+
+.divider { 
+  background-color: var(--accent); 
+  padding: 20px 0; 
+}
+
+.divider h1 { 
+  margin: 0; 
+  font-size: 64px; 
+  color: var(--white); 
+}
+
+.main {
+  background: url('https://www.shutterstock.com/image-photo/underwater-sunlight-ocean-clear-water-260nw-2431727837.jpg') no-repeat center;
+  background-size: 120%;
+  padding: 150px 20px;
+}
+
+.main h2 { 
+  font-size: 48px; 
+  margin: 20px 0; 
+}
+
+.main p { 
+  font-size: 40px; 
+  margin: 12px 0; 
+}
+
+.buy-btn {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 16px 48px;
+  font-size: 28px;
+  border: 3px solid var(--white);
+  border-radius: 40px;
+  color: var(--white);
+  background: transparent;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.buy-btn:hover { 
+  background: var(--white); 
+  color: #0077cc; 
+}
+
+/* Navigation Header */
+.navigation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4280b0;
+  padding: 20px 60px;
+}
+
+.nav-logo img {
+  width: 90px;
+  height: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 50px;
+}
+
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--bg-dark);
+  border-top: 3px solid var(--accent);
+  padding: 40px 20px 20px;
+  margin-top: 50px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  text-align: left;
+}
+
+.footer-section h3 {
+  color: var(--accent);
+  font-size: 24px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 10px;
+}
+
+.footer-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: var(--card-2);
+  border-radius: 8px;
+  border-left: 4px solid var(--accent);
+}
+
+.faq-item strong {
+  color: var(--accent);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 8px 16px;
+  background-color: var(--accent);
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background-color: var(--panel);
+  transform: translateY(-2px);
+}
+
+/* fauna popup (small panel in bottom-right) */
+.fauna-popup {
+  position: fixed;
+  right: 30px;
+  bottom: 100px;
+  width: 320px;
+  max-height: 340px;
+  background-color: #4f93c7;
+  border: 3px solid var(--white);
+  border-radius: 12px;
+  padding: 28px 20px 16px 20px;
+  overflow: hidden;
+  z-index: 1000;
+  display: none;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+.fauna-popup h3 { 
+  margin: 0 0 10px 0; 
+  font-size: 20px; 
+  text-align: left; 
+  color: var(--white); 
+}
+
+.fauna-scroll {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+  max-height: 220px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #aaa rgb(45, 50, 100);
+  text-align: left;
+}
+
+.fauna-scroll li { 
+  font-size: 18px; 
+  padding: 6px 0; 
+}
+
+.fauna-scroll a { 
+  color: var(--white); 
+  text-decoration: none; 
+  display:block; 
+}
+
+.fauna-scroll a:hover { 
+  text-decoration: underline; 
+}
+
+.fauna-scroll::-webkit-scrollbar { 
+  width: 8px; 
+}
+
+.fauna-scroll::-webkit-scrollbar-thumb { 
+  background-color: #aaa; 
+  border-radius: 4px; 
+}
+
+/* close button (крестик) inside fauna-popup */
+#closeFauna {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 22px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 2px 6px;
+}
+
+/* fish cards */
+.fish-section {
+  padding: 50px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-image: linear-gradient(to bottom, #2a9df4, #1c2a48);
+  gap: 40px;
+  border-top: 4px solid var(--white);
+}
+
+.fish {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 20px;
+  width: 40%;
+  min-width: 300px;
+  color: var(--white);
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.fish img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid var(--white);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.fish h2 {
+  font-size: 28px;
+  margin: 0 0 8px 0;
+}
+
+.fish p { 
+  font-size: 18px; 
+  margin: 0; 
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background-color: var(--accent);
+  color: var(--white);
+  padding: 12px 18px;
+  border: 1.5px solid black;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 22px;
+  display: none;
+  transition: all 0.3s;
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  background: rgb(39, 43, 81);
+  color: var(--white);
+}
+
+/* small screens */
+@media (max-width: 720px){
+  .fish { 
+    width: 100%; 
+    min-width: unset; 
+  }
+  
+  .fauna-popup { 
+    right: 12px; 
+    left: 12px; 
+    width: auto; 
+    max-height: 60vh; 
+    padding-top: 36px; 
+  }
+}
+
+/* МАЛЕНЬКИЕ ЭКРАНЫ (смартфоны до 480px) */
+@media (max-width: 480px) {
+  .hero-section {
+    background-size: cover;
+    height: 220px;
+  }
+
+  .divider h1 {
+    font-size: 36px;
+  }
+
+  .main {
+    padding: 60px 10px;
+  }
+  
+  .main h2 {
+    font-size: 28px;
+  }
+  
+  .main p {
+    font-size: 18px;
+  }
+  
+  .buy-btn {
+    font-size: 18px;
+    padding: 10px 24px;
+  }
+
+  .navigation-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .fish {
+    width: 100%;
+    padding: 16px;
+  }
+  
+  .fish h2 {
+    font-size: 22px;
+  }
+  
+  .fish p {
+    font-size: 16px;
+  }
+}
